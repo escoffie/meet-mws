@@ -1,0 +1,315 @@
+/*!
+Theme Name:   	Think Blank
+Theme URI:    	http://think-comunicacion.com/
+Author:         Think
+Author URI:     http://think-comunicacion.com/
+Description:  	Blank theme to start development!
+Version:      	0.1
+License:      	GNU General Public License v2 or later
+License URI:  	http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  	think
+Tags:           Blank theme
+*/
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 44px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto; 
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* HEADER */
+.site-header {
+    border-bottom: 1px solid #c1c1c1;
+}
+
+.site-header .container {
+    padding: 20px 0;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: auto;
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+header .contact-info p {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+header .contact-info {
+    clear: right;
+}
+
+@media only screen and (min-width:768px) {
+    .site-header .container {
+        position: relative;
+    }
+    .header-extras {
+        position: absolute;
+        top:0;
+        right: 0;
+    }
+    header .contact-info p {
+        text-align: right;
+    }
+}
+
+/* social icons menu */
+
+nav.social-menu ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+@media only screen and (min-width:768px) {
+    nav.social-menu ul {
+        float: right;
+    }
+}
+
+nav.social-menu ul li {
+    position: relative;
+    display: inline-block;
+
+}
+
+nav.social-menu ul li a:before {
+    font-family: 'FontAwesome';
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 5px;
+    content: '\f08e';
+    color: #000000;
+    font-size: 32px;
+}
+
+.sr-text {
+    display: none;
+}
+
+/*  social icons hardcoded */
+nav.social-menu ul li a[href*="facebook.com"]::before {
+    content:'\f09a';
+}
+nav.social-menu ul li a[href*="twitter.com"]::before {
+    content:'\f099';
+}
+nav.social-menu ul li a[href*="instagram.com"]::before {
+    content:'\f16d';
+}
+
+/** Main nav **/
+nav.header-menu {
+    display: none;
+}
+
+@media only screen and (min-width:768px) {
+    nav.header-menu {
+        display:block;
+    }
+}
+
+nav.header-menu ul {
+    list-style:none;
+    display: table;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav.header-menu ul li a {
+    text-align: center;
+    padding: 20px 0 12px;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+}
+
+nav.header-menu ul li.current_page_item a {
+    border-bottom: 8px solid violet;
+}
+
+nav.header-menu ul li:hover {
+    background-color: thistle;
+}
+
+@media only screen and (min-width:768px) {
+    nav.header-menu ul li {
+        display: table-cell;
+        width:1%;
+    }
+}
+
+/* Responsive menu */
+
+@media only screen and (max-width:767px) {
+    .header-menu-switch a {
+        height: 40px;
+        background-color: violet;
+        width: 100%;
+        color: white !important;
+        display:block;
+        text-align: center;
+        line-height: 40px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .header-menu-switch a {
+        display: none;
+    }
+}
+
+/* CONTENT TEMPLATE PARTS */
+
+/* Hero */
+.hero {
+    background-color: steelblue;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 450px;
+    text-align: center;
+    margin: 0 auto;
+    display: table;
+    position: relative;
+}
+
+.hero::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.hero .hero-content {
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    position: relative;
+    width: 100vw;
+    z-index: 2;
+}
+
+@media only screen and (min-width:768px) {
+    .hero-text {
+        width:80%;
+        margin: -90px auto 0 auto;
+        text-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .hero-text {
+        width:60%;
+    }
+}
+
+/* Main */
+
+.main {
+    padding: 60px;
+    background-color: white;
+    position: relative;
+}
+
+@media only screen and (min-width:768px) {
+    .main {
+        margin-top: -90px;
+    }
+}
+
+.page-content p {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 30px;
+    padding: 30px 0;
+    border-top: 1px solid #c1c1c1;
+    text-align: center;
+}
+
+footer nav ul {
+    list-style:none;
+}
+
+footer nav ul li {
+    display: inline;
+}
+
+footer nav ul li:last-child .separator {
+    display: none;
+}
+
+footer nav ul li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+footer .contact-info {
+    margin-top: 20px;
+}
+
+footer .contact-info p {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+}

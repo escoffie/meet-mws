@@ -1,0 +1,8 @@
+!.gitignore
+!project
+__stuff
+mysql_data
+project/wp-admin
+project/wp-includes
+docker-compose.yaml
+uploads.ini
