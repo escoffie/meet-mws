@@ -56,4 +56,4 @@
         </div>
     </div>
 
-    <main class="main">
+    <main>
