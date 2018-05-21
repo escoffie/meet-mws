@@ -23,8 +23,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 900;
+    font-family: 'Satisfy', cursive;
+    font-weight: 400;
 }
 
 h1 {
@@ -168,6 +168,7 @@ nav.header-menu ul li a {
     font-weight: bold;
     text-transform: uppercase;
     color: #000;
+    border-bottom: 8px solid transparent;
 }
 
 nav.header-menu ul li.current_page_item a {
@@ -221,6 +222,13 @@ nav.header-menu ul li:hover {
     margin: 0 auto;
     display: table;
     position: relative;
+}
+
+.hero {  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero::after {
@@ -311,4 +319,9 @@ footer .contact-info {
 footer .contact-info p {
     margin: 0 0 5px 0;
     font-size: 14px;
+}
+
+/* WooCommerce specific */
+.woocommerce ul.products li.product a img {
+    border: solid 1px #DEDEDE;
 }
