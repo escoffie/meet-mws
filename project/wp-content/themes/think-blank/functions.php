@@ -8,6 +8,7 @@ $think_version = $theme['Version'];
 # Setup
 function think_setup() {
     add_theme_support('post-thumbnails');
+    add_theme_support( 'title-tag' );
 }
 
 add_action('after_setup_theme', 'think_setup');
@@ -76,3 +77,25 @@ function think_widgets_init() {
 }
 
 add_action( 'widgets_init', 'think_widgets_init' );
+
+# Add featured image (depends on https://wordpress.org/plugins/multiple-featured-images/)
+
+add_filter( 'kdmfi_featured_images', function( $featured_images ) {
+    $args = array(
+            'id' => 'hero-image',
+            'desc' => 'Imagen \'héroe\' para el producto',
+            'label_name' => 'Imagen héroe para el producto',
+            'label_set' => 'Añadir imagen héroe',
+            'label_remove' => 'Quitar imagen héroe',
+            'label_use' => 'Asignar imagen héroe',
+            'post_type' => array( 'product' ),
+    );
+
+    $featured_images[] = $args;
+
+    return $featured_images;
+});
+
+# Tweak woocommerce single product template
+
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 6 );

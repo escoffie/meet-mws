@@ -12,7 +12,7 @@
 
     <div class="main container">
         <main class="text-center page-content">
-            
+
             <?php the_content(); ?>
 
         </main>
