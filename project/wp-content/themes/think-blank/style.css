@@ -257,6 +257,8 @@ nav.header-menu ul li:hover ul.sub-menu li a {
 
 .hero {
     background-color: steelblue;
+    background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
     height: 500px;
@@ -264,8 +266,6 @@ nav.header-menu ul li:hover ul.sub-menu li a {
     margin: 0 auto;
     display: table;
     position: relative;
-    background-size: cover;
-    background-attachment: fixed;
 }
 
 .hero::after {
