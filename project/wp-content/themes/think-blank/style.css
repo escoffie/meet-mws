@@ -22,10 +22,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/*h1, h2, h3, h4, h5, h6 {
     font-family: 'Satisfy', cursive;
     font-weight: 400;
-}
+}*/
 
 h1 {
     font-size: 44px;
@@ -41,6 +41,16 @@ h3 {
 
 h4 {
     font-size: 24px;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+a {
+    color: #a46497;
 }
 
 .container {
@@ -171,7 +181,8 @@ nav.header-menu ul li a {
     border-bottom: 8px solid transparent;
 }
 
-nav.header-menu ul li.current_page_item a {
+nav.header-menu ul li.current_page_item a,
+nav.header-menu ul li.current_page_parent a {
     border-bottom: 8px solid violet;
 }
 
@@ -216,19 +227,13 @@ nav.header-menu ul li:hover {
     background-color: steelblue;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
     height: 450px;
     text-align: center;
     margin: 0 auto;
     display: table;
     position: relative;
-}
-
-.hero {  
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .hero::after {
@@ -322,6 +327,58 @@ footer .contact-info p {
 }
 
 /* WooCommerce specific */
-.woocommerce ul.products li.product a img {
+.woocommerce ul.products li.product a img,
+.woocommerce .single-product .woocommerce-product-gallery__image {
     border: solid 1px #DEDEDE;
+}
+
+.hero .hero-content,
+.product-title,
+.entry-title {
+    font-family: 'Satisfy', cursive;
+    font-weight: 400;
+}
+
+.woocommerce .single-product form.cart {
+    display: grid;
+    grid-template-columns: 1fr 1fr 8fr 1fr;
+}
+
+.woocommerce .single-product .product_meta span {
+    border-top: solid 1px #DEDEDE;
+    display: block;
+    padding: 1em 0 0;
+    margin: 1em 0 0;
+}
+
+.woocommerce .single-product form.cart .input-text {
+    padding: .42em;
+    border-radius: 3px;
+    font-size: 100%;
+    border: solid 1px #DEDEDE;
+    line-height: 1;
+    font-weight: 700;
+    margin: 0;
+}
+
+.woocommerce .woocommerce-Tabs-panel ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: max-content;
+}
+
+.woocommerce .woocommerce-Tabs-panel ul li {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    border-bottom: solid 1px #DEDEDE;
+}
+
+.woocommerce .woocommerce-Tabs-panel ul li:last-child {
+    border-bottom-style: none;
+}
+
+.woocommerce .related {
+    margin-top:5em;
 }
