@@ -64,6 +64,14 @@ a {
 }
 
 /* HEADER */
+
+.pink-gradient {
+    background: -moz-linear-gradient(top, rgba(236,115,255,0.30) 0%, rgba(236,115,255,0) 100%);
+    background: -webkit-linear-gradient(top, rgba(236,115,255,0.30) 0%,rgba(236,115,255,0) 100%);
+    background: linear-gradient(to bottom, rgba(236,115,255,0.30) 0%,rgba(236,115,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7aec73ff', endColorstr='#00ec73ff',GradientType=0 );
+}
+
 .site-header {
     border-bottom: 1px solid #c1c1c1;
 }
@@ -168,6 +176,7 @@ nav.header-menu ul {
     padding: 0;
     margin: 0;
     width: 100%;
+    position: relative;
 }
 
 nav.header-menu ul li a {
@@ -188,6 +197,28 @@ nav.header-menu ul li.current_page_parent a {
 
 nav.header-menu ul li:hover {
     background-color: thistle;
+}
+
+nav.header-menu ul.sub-menu {
+    position: absolute;
+    top:58px;
+    left:-999em;
+    z-index: 100;
+    width: auto;
+    background-color: white;
+}
+
+nav.header-menu ul li:hover ul.sub-menu {
+    left: auto;
+}
+
+nav.header-menu ul li:hover ul.sub-menu li {
+    display: block;
+}
+
+nav.header-menu ul li:hover ul.sub-menu li a {
+    width: auto;
+    display: block;
 }
 
 @media only screen and (min-width:768px) {
@@ -223,11 +254,12 @@ nav.header-menu ul li:hover {
 /* CONTENT TEMPLATE PARTS */
 
 /* Hero */
+
 .hero {
     background-color: steelblue;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 450px;
+    height: 500px;
     text-align: center;
     margin: 0 auto;
     display: table;
@@ -242,8 +274,10 @@ nav.header-menu ul li:hover {
     width: 100%;
     height: 100%;
     top: 0;
+    right:0;
+    bottom:0;
     left: 0;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.2);
 }
 
 .hero .hero-content {

@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <header class="site-header">
+    <header class="site-header pink-gradient">
         <div class="container">
             <div class="logo">
                 <a href="<?php echo esc_url( home_url('/') ); ?>">

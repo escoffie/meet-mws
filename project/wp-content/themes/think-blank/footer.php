@@ -1,5 +1,5 @@
     </main>
-    <footer>
+    <footer class="pink-gradient">
         <?php
         $args = array(
             'theme_location' => 'footer-menu',
